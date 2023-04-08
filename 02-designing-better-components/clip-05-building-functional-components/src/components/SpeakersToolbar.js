@@ -63,6 +63,26 @@ function SpeakersToolbar() {
                 </div>
               </div>
             </li>
+            <li className="d-flex flex-column flex-md-row">
+              <strong>Year</strong>
+              <label className="dropmenu">
+                <select
+                  className="form-control"
+                  value={eventYear}
+                  onChange={({ currentTarget }) => {
+                    setEventYear(currentTarget.value);
+                  }}
+                >
+                  {EVENT_YEARS.map(function (year) {
+                    return (
+                      <option value={year} key={year}>
+                        {year}
+                      </option>
+                    );
+                  })}
+                </select>
+              </label>
+            </li>
           </ul>
         </div>
       </div>
