@@ -1,8 +1,17 @@
 import { ThemeContext } from "../contexts/ThemeContext";
 import { useContext } from "react";
+import { SpeakerFilterContext } from "../contexts/SpeakerFilterContext";
 
-function SpeakersToolbar({ showSessions, setShowSessions }) {
+function SpeakersToolbar() {
   const { theme, setTheme } = useContext(ThemeContext);
+  const {
+    showSessions,
+    setShowSessions,
+    eventYear,
+    setEventYear,
+    setSearchQuery,
+    EVENT_YEARS,
+  } = useContext(SpeakerFilterContext);
 
   return (
     <section className="toolbar dark-theme-header">
@@ -36,6 +45,23 @@ function SpeakersToolbar({ showSessions, setShowSessions }) {
                   <option value="dark">Dark</option>
                 </select>
               </label>
+            </li>
+            <li>
+              <div className="input-group">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Search..."
+                  onChange={(event) => {
+                    setSearchQuery(event.target.value);
+                  }}
+                />
+                <div className="input-group-append">
+                  <button className="btn btn-secondary" type="button">
+                    <i className="fa fa-search"></i>
+                  </button>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
