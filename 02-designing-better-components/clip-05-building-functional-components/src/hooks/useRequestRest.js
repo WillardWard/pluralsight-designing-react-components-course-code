@@ -10,7 +10,7 @@ export const REQUEST_STATUS = {
 const restUrl = "api/speakers";
 
 function useRequestRest() {
-  const [data, setData] = useState(initialData);
+  const [data, setData] = useState([]);
   const [requestStatus, setRequestStatus] = useState(REQUEST_STATUS.LOADING);
   const [error, setError] = useState("");
 
