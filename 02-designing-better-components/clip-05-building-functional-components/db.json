@@ -1,22 +1,6 @@
 {
   "speakers": [
     {
-      "id": "47344",
-      "first": "Joe",
-      "last": "Biden",
-      "xbio": "Bio not entered yet",
-      "sessions": [
-        {
-          "id": "88888",
-          "title": "New Session for Joe",
-          "room": {
-            "name": "Main Ball Room"
-          },
-          "eventYear": "2019"
-        }
-      ]
-    },
-    {
       "id": "8590",
       "first": "Chris",
       "last": "Richardson",
